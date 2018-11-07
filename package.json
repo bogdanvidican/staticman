@@ -1,0 +1,28 @@
+{
+  "name": "contact-form",
+  "version": "1.0.0",
+  "description": "dummy contact form to communicate with staticman server",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bogdanvidican/staticman-test.git"
+  },
+  "author": "bogdan vidican",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bogdanvidican/staticman-test/issues"
+  },
+  "homepage": "https://github.com/bogdanvidican/staticman-test#readme",
+  "devDependencies": {
+    "git-scripts": "^0.2.1",
+    "surge": "^0.20.1"
+  },
+  "git": {
+    "scripts": {
+      "pre-push": "surge --project ./"
+    }
+  }
+}
