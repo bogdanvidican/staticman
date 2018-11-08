@@ -1,60 +1,65 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+        * {box-sizing: border-box;}
 
-input[type=text], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-}
+        input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
 
-input[type=submit] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
 
-input[type=submit]:hover {
-    background-color: #45a049;
-}
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
 
-.container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-}
-</style>
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+    </style>
 </head>
+
 <body>
 
-<h3>Contact Form</h3>
+    <h3>Contact Form</h3>
 
-<div class="container">
-  <form method="POST" action="https://staticmanserver.herokuapp.com/v2/entry/bogdanvidican/staticman/master/comments">
-    <label for="fname">Name</label>
-    <input type="text" id="fname" name="fields[name]" placeholder="Your name..">
+    <div class="container">
+        <form method="POST" action="https://staticmanserver.herokuapp.com/v2/entry/bogdanvidican/staticman/master/comments">
+            <input name="options[slug]" type="hidden" value="">
+            <label for="fname">Name</label>
+            <input type="text" id="fname" name="fields[name]" placeholder="Your name..">
 
-    <label for="lname">Email</label>
-    <input type="text" id="lname" name="fields[email]" placeholder="Your email..">
+            <label for="lname">Email</label>
+            <input type="text" id="lname" name="fields[email]" placeholder="Your email..">
 
-    <label for="subject">Message</label>
-    <textarea id="subject" name="fields[message]" placeholder="Write something.." style="height:200px"></textarea>
-
-    <input type="submit" value="Submit">
-  </form>
-</div>
+            <label for="subject">Message</label>
+            <textarea id="subject" name="fields[message]" placeholder="Write something.." style="height:200px"></textarea>
+            <div class="g-recaptcha" data-sitekey="6Lc2dXkUAAAAAL6hepoPO4BYkTI_uRzQ8xR92kvy"></div>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
 
 </body>
+
 </html>
